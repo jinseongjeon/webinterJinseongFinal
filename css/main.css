@@ -1,0 +1,360 @@
+@charset 'utf-8';
+
+html {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 14px;
+}
+body {
+  overflow-x: hidden;
+  color: rgb(29, 29, 31);
+  letter-spacing: -0.05em;
+  background: white;
+}
+p {
+  line-height: 1.6;
+}
+
+.global-nav {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 44px;
+  padding: 0 1rem;
+  background: rgb(29, 29, 31);
+}
+.local-nav {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 52px;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+.local-nav-sticky .local-nav {
+  position: fixed;
+  top: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: saturate(180%) blur(15px);
+}
+.global-nav-item {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+.global-nav-links,
+.local-nav-links {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+.global-nav-links {
+  justify-content: space-between;
+}
+.local-nav-links .product-name {
+  margin-right: auto;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+.local-nav-links a:not(.product-name) {
+  margin-left: 3em;
+}
+.local-nav-links a {
+  font-size: 0.8rem;
+}
+a {
+  color: rgb(29, 29, 31);
+  text-decoration: none;
+}
+.scroll-section {
+  position: relative;
+  padding-top: 50vh;
+}
+#scroll-section-0 h1 {
+  position: relative;
+  top: -10vh;
+  z-index: 5;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 900;
+}
+.main-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 35vh;
+  margin: 5px 0;
+  height: 3em;
+  font-size: 2.5rem;
+  opacity: 0;
+}
+.main-message p {
+  font-weight: 900;
+  text-align: center;
+  line-height: 1.4;
+}
+.description {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(29, 29, 31);
+  font-weight: 900;
+  margin-bottom: 20vh;
+}
+.description strong {
+  font-size: 3rem;
+  color: rgb(29, 29, 31);
+  font-weight: 900;
+}
+.main-message small {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+#scroll-section-2 .main-message {
+  font-size: 3.5rem;
+}
+.pin {
+  width: 1px;
+  height: 100px;
+  background: rgb(29, 29, 31);
+  margin: 1vh 0;
+}
+#scroll-section-2 .b,
+#scroll-section-2 .c {
+  font-size: 1.3rem;
+}
+#scroll-section-2 .b {
+  top: 10%;
+  left: 40%;
+}
+#scroll-section-2 .c {
+  top: 15%;
+  left: 45%;
+}
+.mid-message {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(29, 29, 31);
+  font-weight: 900;
+  margin-bottom: 20vh;
+}
+.mid-message strong {
+  font-size: 6rem;
+  color: rgb(29, 29, 31);
+  font-weight: 900;
+}
+.canvas-caption {
+  max-width: 1000px;
+  margin: -3em auto 0;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  color: white;
+  background: rgb(29, 29, 31);
+}
+.sticky-elem {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+}
+.desc-message {
+  width: 50%;
+  font-weight: 900;
+  opacity: 0;
+}
+#show-scene-0 #scroll-section-0 .sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
+#show-scene-2 #scroll-section-2 .sticky-elem,
+#show-scene-3 #scroll-section-3 .sticky-elem {
+  display: block;
+}
+.sticky-elem-canvas {
+  top: 0;
+  height: 100%;
+  left: 0;
+}
+.sticky-elem-canvas canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#scroll-section-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-blend-canvas.sticky {
+  position: fixed;
+  top: 0;
+}
+.flex-box1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+.flex-box2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20vh;
+}
+.flex-box3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40vh;
+  margin-bottom: 20vh;
+}
+.flex-box-png1,
+.flex-box-png2,
+.flex-box-png3,
+.flex-box-png4 {
+  position: relative;
+}
+.png1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 40vw;
+  transform: rotateZ(20deg);
+  opacity: 0.2;
+}
+.png2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 30vw;
+  transform: rotateZ(-20deg);
+  opacity: 0.2;
+}
+.gif-img {
+  display: flex;
+}
+.gif {
+  width: 50vw;
+}
+.gif-text1 {
+  margin-right: 6vw;
+  color: rgba(29, 29, 31, 0.8);
+  font-size: 1.4rem;
+}
+.gif-text2 {
+  margin-left: 6vw;
+  color: rgba(29, 29, 31, 0.8);
+  font-size: 1.4rem;
+}
+.gray-line {
+  background-color: rgba(29, 29, 31, 0.8);
+  height: 1px;
+  width: 1.2em;
+  margin-bottom: 1.3em;
+}
+.gif-text-title {
+  font-weight: 900;
+  margin-bottom: 0.7rem;
+}
+.gif-text {
+  font-weight: 400;
+}
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background: white;
+  opacity: 0;
+  transition: 1s;
+}
+.before-load .loading {
+  opacity: 1;
+}
+@keyframes loading-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading-circle-ani {
+  0% {
+    stroke-dashoffset: 157;
+  }
+  75% {
+    stroke-dashoffset: -147;
+  }
+  100% {
+    stroke-dashoffset: -157;
+  }
+}
+.loading-circle {
+  width: 54px;
+  height: 54px;
+  animation: loading-spin 2.4s ease-in-out infinite;
+}
+.loading-circle circle {
+  stroke: black;
+  stroke-width: 4;
+  stroke-dasharray: 157;
+  stroke-dashoffset: 0;
+  fill: none;
+  animation: loading-circle-ani 1.2s ease-in-out infinite;
+}
+@media (min-width: 1024px) {
+  #scroll-section-0 h1 {
+    font-size: 9vw;
+  }
+  .main-message {
+    font-size: 4vw;
+  }
+  .description {
+    font-size: 2rem;
+  }
+  .description strong {
+    font-size: 6rem;
+  }
+  #scroll-section-2 .main-message {
+    font-size: 6vw;
+  }
+  .main-message small {
+    font-size: 1.5vw;
+  }
+  .desc-message {
+    width: 20%;
+  }
+  #scroll-section-2 .b {
+    top: 20%;
+    left: 53%;
+  }
+  #scroll-section-2 .c {
+    left: 55%;
+  }
+  .canvas-caption {
+    font-size: 2rem;
+  }
+}
